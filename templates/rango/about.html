@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %} <!-- New line -->
+<html>
+    <head>
+        <title>Rango</title>
+    </head>
+<body>
+    <h1>Rango says...</h1>
+
+    <div>
+        here is the about page. <br />
+        <strong>{{ boldmessage }}</strong><br />
+    </div>
+    <a href = "{% url 'index' %}" Back to Index page></a>
+
+    <div>
+        This tutorial has been completed by Arvid Hallstroem <br />
+        <strong>{{ boldmessage }}</strong><br />
+        </div>
+
+    <div>
+        <a href="/rango/about/">About</a><br />
+        <img src="{% static 'images/rango.jpg' %}"
+        alt="Picture of Rango" /> <!-- New line -->
+    
+    </div>
+
+    <div>
+        <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat">
+    
+    </div>
+    <p>Media URL: {{ MEDIA_URL }}</p>
+
+    
+    </body>
+</html>
